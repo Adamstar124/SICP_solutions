@@ -31,7 +31,7 @@
     (cond ((or (=number? p1 0) (=number? p2 0)) 0)
           ((=number? p1 1) p2)
           ((=number? p2 1) p1)
-          ((and (=number? p1) (=number? p2)) (* p1 p2))
+          ((and (number? p1) (number? p2)) (* p1 p2))
           (else (list '* p1 p2))))
       
 (define (sum? x) (and (pair? x) (eq? (car x) '+)))
